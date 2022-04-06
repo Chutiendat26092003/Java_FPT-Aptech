@@ -60,21 +60,26 @@ public class Date {
         }
     }
 
+//    public String toString() {
+//        String zero = "0";
+//        if (day < 10) {
+//            zero = zero + day;
+//        } else {
+//            zero = "" + day;
+//        }
+//        zero = zero + "/";
+//        if (month < 10)
+//        {
+//            zero = zero + "0" + month;
+//        } else {
+//            zero = zero + month;
+//        }
+//        zero = zero + "/" + year;
+//        return "Date[dd/mm/yyyy - " + zero + "]";
+//    }
+
     public String toString() {
-        String zero = "0";
-        if (day < 10) {
-            zero = zero + day;
-        } else {
-            zero = "" + day;
-        }
-        zero = zero + "/";
-        if (month < 10)
-        {
-            zero = zero + "0" + month;
-        } else {
-            zero = zero + month;
-        }
-        zero = zero + "/" + year;
-        return "Date[dd/mm/yyyy - " + zero + "]";
+        return String.format("%02d/%02d/%04d", day, month, year);
     }
+
 }

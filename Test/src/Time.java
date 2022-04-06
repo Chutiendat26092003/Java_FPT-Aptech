@@ -60,48 +60,51 @@ public class Time {
         }
     }
 
-    public String toString() {
-        String zero = "0";
-        if (hour < 10) {
-            zero = zero + hour;
-        } else {
-            zero = "" + hour;
-        }
-        zero = zero + ":";
-        if (minute < 10)
-        {
-            zero = zero + "0" + minute;
-        } else {
-            zero = zero + minute;
-        }
-        zero = zero + ":";
-        if (second < 10) {
-            zero = zero + "0" + second;
-        } else {
-            zero = zero + second;
-        }
-        return "Time[hh:mm:ss - " + zero + "]";
-    }
+//    public String toString() {
+//        String zero = "0";
+//        if (hour < 10) {
+//            zero = zero + hour;
+//        } else {
+//            zero = "" + hour;
+//        }
+//        zero = zero + ":";
+//        if (minute < 10)
+//        {
+//            zero = zero + "0" + minute;
+//        } else {
+//            zero = zero + minute;
+//        }
+//        zero = zero + ":";
+//        if (second < 10) {
+//            zero = zero + "0" + second;
+//        } else {
+//            zero = zero + second;
+//        }
+//        return "Time[hh:mm:ss - " + zero + "]";
+//    }
 
+    public String toString() {
+        return String.format("%02d:%02d:%02d", hour, minute, second);
+    }
 
 
 
     public Time nextSecond()  {
         second++;
-        if (second == 60)
+        if (second >= 60)
         {
             minute++;
             second = 0;
-        }
-        if (minute == 60)
-        {
-            hour++;
-            minute = 0;
-        }
-        if (hour == 24)
-        {
-            //increases the day
-            hour = 0;
+            if (minute >= 60)
+            {
+                hour++;
+                minute = 0;
+                if (hour >= 24)
+                {
+                    //increases the day
+                    hour = 0;
+                }
+            }
         }
         return this;
     }
@@ -109,19 +112,19 @@ public class Time {
 
     public Time previousSecond() {
         second--;
-        if (second == -1)
+        if (second <= -1)
         {
             minute--;
             second = 59;
-        }
-        if (minute == -1)
-        {
-            hour--;
-            minute = 59;
-        }
-        if (hour == -1)
-        {
-            hour = 23;
+            if (minute <= -1)
+            {
+                hour--;
+                minute = 59;
+                if (hour <= -1)
+                {
+                    hour = 23;
+                }
+            }
         }
         return this;
     }
