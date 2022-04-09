@@ -88,4 +88,25 @@ public class Line {
     public double getLength() {
         return begin.distance(end);
     }
+
+    public boolean check2IntersectingLines(int xE1, int yE1 , int xE2 , int yE2) {
+        int x1 = this.begin.getX();
+        int y1 = this.begin.getY();
+        int x2 = this.end.getX();
+        int y2 = this.end.getY();
+
+        int checkE1 = (y1 - y2) * (xE1 - x1) + (x2 - x1) * (yE1 - y1);
+        int checkE2 = (y1 - y2) * (xE2 - x1) + (x2 - x1) * (yE2 - y1);
+
+        int check1 = (yE1 - yE2) * (x1 - xE1) + (xE2 - xE1) * (y1 - yE1);
+        int check2 = (yE1 - yE2) * (x2 - xE1) + (xE2 - xE1) * (y2 - yE1);
+
+        if (check1 * check2 < 0 && checkE1 * checkE2 < 0)  {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 }

@@ -5,7 +5,7 @@ public class TestLine {
         Line l1 = new Line(1, 2, 3, 4);
         System.out.println(l1);
 
-        Line l2 = new Line(new Point(5, 6), new Point(7 ,8));
+        Line l2 = new Line(new Point(5, 6), new Point(7, 8));
         System.out.println(l2);
 
         l1.setBegin(new Point(11, 12));
@@ -29,13 +29,14 @@ public class TestLine {
         System.out.println("end's y is: " + l1.getEndX());
 
 
-
-        l1.setBeginXY(31, 32);
-        l1.setEndXY(33, 34);
+        l1.setBeginXY(21, 32);
+        l1.setEndXY(23, 34);
         System.out.println(l1);
         System.out.println("begin's x and y are: " + Arrays.toString(l1.getBeginXY()));
         System.out.println("end's x and y are: " + Arrays.toString(l1.getEndXY()));
 
         System.out.printf("length is: %.2f%n", l1.getLength());
+
+        System.out.println(l1.check2IntersectingLines(20, 32, 22, 34));
     }
 }

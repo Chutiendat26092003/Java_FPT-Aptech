@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java_FPT-Aptech.iml" filepath="$PROJECT_DIR$/.idea/Java_FPT-Aptech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java1_14-GioiThieuOOP/java1_14-GioiThieuOOP.iml" filepath="$PROJECT_DIR$/java1_14-GioiThieuOOP/java1_14-GioiThieuOOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss6-ss7/ss6-ss7.iml" filepath="$PROJECT_DIR$/ss6-ss7/ss6-ss7.iml" />
+    </modules>
+  </component>
+</project>

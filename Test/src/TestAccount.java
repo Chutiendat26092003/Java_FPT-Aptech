@@ -6,7 +6,6 @@ public class TestAccount {
         System.out.println("balance: " + a1.getBalance());
         System.out.println("credit: " + a1.credit(100));
         System.out.println("debit: " + a1.debit(200));
-//        System.out.println("transfer to: " + a1.transferTo( ,500));
         System.out.println(a1.toString());
 
         System.out.println("\n");
@@ -17,7 +16,12 @@ public class TestAccount {
         System.out.println("balance: " + a2.getBalance());
         System.out.println("credit: " + a2.credit(300));
         System.out.println("debit: " + a2.debit(10000));
-//        System.out.println("transfer to: " + a2.transferTo(2, 500));
+        System.out.println(a2.toString());
+
+        a1.transferTo(a2,200);
         System.out.println(a1.toString());
+        System.out.println(a2.toString());
+
+
     }
 }

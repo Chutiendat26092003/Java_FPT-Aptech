@@ -40,7 +40,7 @@ public class Circle {
         center.setX(x);
     }
     public int getCenterY() {
-        return center.getX();
+        return center.getY();
     }
     public void setCenterY(int y) {
         center.setY(y);

@@ -50,7 +50,7 @@ public class Account {
     }
 
     public String toString() {
-        return "Account[id = " + id + ", name = " + name + ", balance = " + balance + "]";
+        return String.format("Account[number=%s, balance=$%d]", name, balance);
     }
 
 }
