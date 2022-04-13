@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Inheritance-Person.iml" filepath="$PROJECT_DIR$/Inheritance-Person.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Polymorphism-Substitutability.iml" filepath="$PROJECT_DIR$/Polymorphism-Substitutability.iml" />
     </modules>
   </component>
 </project>
